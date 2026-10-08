@@ -1,0 +1,14 @@
+{
+  "name": "swat-watersports",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A simple SWAT Watersports website with a written maintainer handoff.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "wrangler deploy --dry-run"
+  },
+  "devDependencies": {
+    "wrangler": "4.149.0"
+  }
+}
