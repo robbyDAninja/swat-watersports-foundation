@@ -1,4 +1,4 @@
-**Version:** 1.2
+**Version:** 1.3
 **Last updated:** 2026-10-08
 
 # Public source index
@@ -19,6 +19,7 @@ Only `public/` is served by Cloudflare. No private correspondence, transcripts o
 
 | Version | Date | Change |
 |---|---|---|
+| 1.3 | 2026-10-08 | Registered website tagline/header integration and the public file/README documentation update. |
 | 1.0 | 2026-10-08 | Created the SWAT review foundation and written maintainer handoff. |
 
 | 1.1 | 2026-10-08 | Added unchanged brand-guide exports and updated Wrangler to 4.149.0 after the older local runtime rejected the current compatibility date. |

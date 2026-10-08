@@ -1,4 +1,4 @@
-**Version:** 1.0
+**Version:** 1.1
 **Last updated:** 2026-10-08
 
 # Website files
@@ -18,4 +18,5 @@ Use the launch checklist before enabling search indexing. This file is safe publ
 
 | Version | Date | Change |
 |---|---|---|
+| 1.1 | 2026-10-08 | Incorporated supplied tagline wording by section and moved the colorful logo into the header; assets/business details unchanged. |
 | 1.0 | 2026-10-08 | Created the SWAT review foundation and written maintainer handoff. |

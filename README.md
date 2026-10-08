@@ -1,4 +1,4 @@
-**Version:** 1.2
+**Version:** 1.3
 **Last updated:** 2026-10-08
 
 # SWAT Watersports website
@@ -20,6 +20,10 @@ For a local preview, install Node.js LTS, run `npm ci`, then `npm run dev`. Open
 
 The site is deliberately marked **noindex** during review. The handoff lists every setting to change at launch. All font and image files are local; the site sends no inquiry forms or analytics events. Call/text links open the visitor's phone or messaging app.
 
+## Brand wording
+
+The colorful supplied logo appears in the header. “Life is better behind the boat.” is the main tagline, “Wake. Ride. Repeat.” introduces the rides and “Your wake. Your way.” heads group outings. Keep these in their separate roles so the page stays clear.
+
 ## File map
 
 | File | What to change |
@@ -36,6 +40,7 @@ Logo artwork remains raster source; these files are not vector or embroidery mas
 
 | Version | Date | Change |
 |---|---|---|
+| 1.3 | 2026-10-08 | Recorded the colorful header logo and supplied tagline placements in the website. |
 | 1.0 | 2026-10-08 | Created the SWAT review foundation and written maintainer handoff. |
 
 | 1.1 | 2026-10-08 | Linked the existing brand-guide exports included with this source handoff. |
