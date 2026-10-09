@@ -1,4 +1,4 @@
-**Version:** 1.1
+**Version:** 1.2
 **Last updated:** 2026-10-08
 
 # Erinn’s SWAT website handoff
@@ -39,7 +39,7 @@ If you start from the ZIP instead: unzip it, create an empty `swat-watersports` 
 
 - [ ] Keep the normal Workers Builds authentication that Cloudflare offers. You do not need Dave's API key pasted into Claude for this account arrangement.
 - [ ] Deploy, wait for success, and open the generated `workers.dev` address. Save that address privately in your maintenance notes.
-- [ ] Check the logo, photos, pricing, mobile menu, questions, and phone/text links. A computer may offer a phone app; a phone is the better contact-link test.
+- [ ] Check the logo, photos, pricing, mobile menu, questions, and phone/text links. Check the background video and its pause/play button; visitors who prefer reduced motion should start on the photo. A computer may offer a phone app; a phone is the better contact-link test.
 
 **Checkpoint:** your Cloudflare account serves the SWAT draft at its own preview address. Dave's domain is still untouched.
 
@@ -95,6 +95,13 @@ Ask Claude for a specific change, review the result, commit/push, and check the 
 
 The simple static site can use free hosting; domain renewal and any separate booking-service subscription remain separate. [Cloudflare static-assets pricing](https://developers.cloudflare.com/workers/static-assets/billing-and-limitations/).
 
+## Replace the opening video later
+
+- Use footage you own or have permission to use on this website. A public YouTube video is not automatically available for reuse.
+- Ask Claude to export a silent H.264 MP4, about 10–15 seconds, with a small file size and fast-start playback. The current clip is portrait footage cropped by the page; a landscape replacement may need different framing in the CSS.
+- Replace `public/assets/hero-loop.mp4` and its matching `hero-poster.jpg`. Keep a useful still so the opening works when motion is paused, playback fails, or JavaScript is disabled.
+- Check desktop and phone framing, readable text, pause/play, and reduced-motion behavior. Commit/push and verify the deployed version.
+
 ## Copy this into Claude
 
 > I maintain Dave Bender's SWAT Watersports site. Read README.md, CLAUDE.md, HANDOFF.md and CONTENT-CHECKLIST.md in my SWAT repository. First tell me which checklist checkpoint I am at. Walk me through one step at a time using my existing GitHub and Cloudflare accounts. Keep SWAT separate from Stuart Sailing. Verify the target account before deployment. Do not change Dave's nameservers until we have backed up and checked all DNS and email records and he has authorized the switch. Do not request API keys in chat or invent missing business facts. Show me how to make one small edit and verify it redeploys.
@@ -105,6 +112,7 @@ Instructions checked October 8, 2026. Claude should refresh these if the screens
 
 | Version | Date | Change |
 |---|---|---|
+| 1.2 | 2026-10-08 | Added video verification and plain-language media replacement instructions. |
 | 1.0 | 2026-10-08 | Created the SWAT review foundation and written maintainer handoff. |
 
 | 1.1 | 2026-10-08 | Added the exact template and copy links for Erinn. |

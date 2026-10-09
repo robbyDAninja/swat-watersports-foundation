@@ -28,6 +28,12 @@
   </header>
   <main id="main">
     <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true">
+        <img src="/assets/hero-poster.jpg" width="720" height="1280" alt="" fetchpriority="high">
+        <video id="hero-video" muted loop playsinline preload="none" poster="/assets/hero-poster.jpg" tabindex="-1">
+          <source data-src="/assets/hero-loop.mp4" type="video/mp4">
+        </video>
+      </div>
       <div class="hero-inner">
         <div class="hero-copy">
           <h1 id="hero-title">Life is better<br>behind the boat.</h1>
@@ -35,8 +41,8 @@
           <div class="hero-actions"><a class="button" href="tel:+15618010080" data-booking>Call to book</a><a class="button button-outline" href="sms:+15618010080" data-text>Text your idea</a></div>
           <a class="phone-link" href="tel:+15618010080" data-call><span data-phone>(561) 801-0080</span></a>
         </div>
-        <figure class="hero-photo"><img src="/assets/hero-rider.jpg" width="900" height="1600" alt="A SWAT rider holding the tow rope and riding the boat’s wake" fetchpriority="high"><figcaption>A little splash. A lot to remember.</figcaption></figure>
       </div>
+      <button class="video-toggle" type="button" aria-controls="hero-video" hidden>Play background video</button>
     </section>
     <section class="section rides-section" id="rides" aria-labelledby="rides-title">
       <div class="section-heading"><p class="section-tagline">Wake. Ride. Repeat.</p><h2 id="rides-title">Pick your ride.</h2><p>A first try or a familiar favorite. Tell us what sounds like fun.</p></div>

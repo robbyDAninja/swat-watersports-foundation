@@ -1,12 +1,14 @@
-**Version:** 1.0
+**Version:** 1.1
 **Last updated:** 2026-10-08
 
 # Website artwork and photos
 
 | File | Origin / use |
 |---|---|
-| logo-rider.png | Supplied original 480 × 480 rider logo; unchanged colorful hero mark |
+| logo-rider.png | Supplied original 480 × 480 rider logo; unchanged colorful header mark |
 | logo-tube.png | Supplied original 480 × 480 tubing variant; unchanged illustration, not a photograph |
+| hero-loop.mp4 | Silent 12-second edit from real SWAT footage, 720 × 1280 H.264; responsive background crop |
+| hero-poster.jpg | Matching frame from that loop, for static/fallback opening |
 | hero-rider.jpg | Real SWAT footage still, from earlier website concept |
 | ski-moment.jpg | Real SWAT footage still, from earlier website concept |
 | wake-moment.jpg | Real SWAT footage still, from earlier website concept |
@@ -18,4 +20,5 @@ Display serif typography uses system Georgia. These logos are raster files, not 
 
 | Version | Date | Change |
 |---|---|---|
+| 1.1 | 2026-10-08 | Added actual SWAT hero loop and matching poster; original media retained. |
 | 1.0 | 2026-10-08 | Created the SWAT review foundation and written maintainer handoff. |

@@ -38,3 +38,50 @@ if (menu && navigation) {
     }
   });
 }
+
+
+// Decorative local video; the poster works without JavaScript or playback.
+const hero = document.querySelector('.hero');
+const heroVideo = document.querySelector('#hero-video');
+const videoToggle = document.querySelector('.video-toggle');
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+let videoLoaded = false;
+let videoPausedByVisitor = false;
+function updateVideoButton() {
+  videoToggle.textContent = heroVideo.paused ? 'Play background video' : 'Pause background video';
+}
+function playHeroVideo() {
+  if (!videoLoaded) {
+    const source = heroVideo.querySelector('source');
+    source.src = source.dataset.src;
+    heroVideo.load();
+    videoLoaded = true;
+  }
+  heroVideo.play().catch(updateVideoButton);
+}
+if (hero && heroVideo && videoToggle) {
+  videoToggle.hidden = false;
+  heroVideo.addEventListener('playing', () => {
+    hero.classList.add('has-video');
+    updateVideoButton();
+  });
+  heroVideo.addEventListener('pause', updateVideoButton);
+  function showHeroPoster() {
+    hero.classList.remove('has-video');
+    videoToggle.hidden = true;
+  }
+  heroVideo.addEventListener('error', showHeroPoster);
+  heroVideo.querySelector('source').addEventListener('error', showHeroPoster);
+  videoToggle.addEventListener('click', () => {
+    videoPausedByVisitor = !heroVideo.paused;
+    if (videoPausedByVisitor) heroVideo.pause();
+    else playHeroVideo();
+  });
+  reducedMotion.addEventListener('change', () => {
+    if (reducedMotion.matches) {
+      heroVideo.pause();
+      hero.classList.remove('has-video');
+    } else if (!videoPausedByVisitor && !navigator.connection?.saveData) playHeroVideo();
+  });
+  if (!reducedMotion.matches && !navigator.connection?.saveData) playHeroVideo();
+}

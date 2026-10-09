@@ -1,4 +1,4 @@
-**Version:** 1.3
+**Version:** 1.4
 **Last updated:** 2026-10-08
 
 # SWAT Watersports website
@@ -18,11 +18,17 @@ Recommended arrangement: Dave owns his domain and business; Erinn maintains a se
 
 For a local preview, install Node.js LTS, run `npm ci`, then `npm run dev`. Open the address Wrangler prints. `npm run check` validates the deployment configuration without publishing. `npm run deploy` publishes to the Cloudflare account currently signed in, so check `npx wrangler whoami` first.
 
-The site is deliberately marked **noindex** during review. The handoff lists every setting to change at launch. All font and image files are local; the site sends no inquiry forms or analytics events. Call/text links open the visitor's phone or messaging app.
+The site is deliberately marked **noindex** during review. The handoff lists every setting to change at launch. All font, image and video files are local; the site sends no inquiry forms or analytics events. Call/text links open the visitor's phone or messaging app.
 
 ## Brand wording
 
 The colorful supplied logo appears in the header. “Life is better behind the boat.” is the main tagline, “Wake. Ride. Repeat.” introduces the rides and “Your wake. Your way.” heads group outings. Keep these in their separate roles so the page stays clear.
+
+## Hero video
+
+The full-width opening uses a silent 12-second loop from real SWAT rider footage. Visitors can pause it. Reduced-motion and data-saving preferences start with the still image instead; the photo also works without JavaScript or when video cannot play. The footage is decorative and does not show the boat from outside.
+
+Erinn can replace `public/assets/hero-loop.mp4` and `public/assets/hero-poster.jpg` later. Use your own footage or footage with verified website-use permission. See the replacement checklist in [HANDOFF.md](HANDOFF.md).
 
 ## File map
 
@@ -31,8 +37,8 @@ The colorful supplied logo appears in the header. “Life is better behind the b
 | public/index.html | Words, activity details, prices, FAQ answers and photo descriptions |
 | public/styles.css | Colors, fonts, spacing and phone/tablet layout |
 | public/site-config.js | Public phone, optional SWAT booking link and review banner switch |
-| public/app.js | Mobile menu and contact-link behavior |
-| public/assets/ | Supplied logos, real SWAT photo stills and licensed font |
+| public/app.js | Mobile menu, contact links and hero playback |
+| public/assets/ | Supplied logos, real SWAT photos/video and licensed font |
 | wrangler.jsonc | Cloudflare project name and public folder |
 | package.json / package-lock.json | Pinned deployment tool, not a website framework |
 
@@ -40,6 +46,7 @@ Logo artwork remains raster source; these files are not vector or embroidery mas
 
 | Version | Date | Change |
 |---|---|---|
+| 1.4 | 2026-10-08 | Added a local silent hero loop, motion/fallback behavior and media replacement pointers. |
 | 1.3 | 2026-10-08 | Recorded the colorful header logo and supplied tagline placements in the website. |
 | 1.0 | 2026-10-08 | Created the SWAT review foundation and written maintainer handoff. |
 

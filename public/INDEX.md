@@ -1,4 +1,4 @@
-**Version:** 1.1
+**Version:** 1.2
 **Last updated:** 2026-10-08
 
 # Website files
@@ -8,15 +8,16 @@
 | index.html | Review homepage, business copy and fallback contact links |
 | styles.css | Navy/serif reference treatment, responsive layout and local font |
 | site-config.js | Public settings: contact, optional booking URL and review banner |
-| app.js | Contact links and accessible mobile navigation |
+| app.js | Contact links, accessible menu and optional hero playback |
 | _headers | Review noindex and response headers |
 | robots.txt | Blocks search indexing during review |
 | 404.html | Missing-page response |
-| assets/INDEX.md | Unchanged public images and licensed font |
+| assets/INDEX.md | Original images, derived SWAT video/poster and licensed font |
 
 Use the launch checklist before enabling search indexing. This file is safe public source documentation.
 
 | Version | Date | Change |
 |---|---|---|
+| 1.2 | 2026-10-08 | Registered full-width video hero, local media policy, playback controls and new assets. |
 | 1.1 | 2026-10-08 | Incorporated supplied tagline wording by section and moved the colorful logo into the header; assets/business details unchanged. |
 | 1.0 | 2026-10-08 | Created the SWAT review foundation and written maintainer handoff. |
