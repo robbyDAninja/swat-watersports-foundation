@@ -1,5 +1,5 @@
-**Version:** 1.2
-**Last updated:** 2026-10-08
+**Version:** 1.3
+**Last updated:** 2026-10-09
 
 # Erinn’s SWAT website handoff
 
@@ -98,8 +98,10 @@ The simple static site can use free hosting; domain renewal and any separate boo
 ## Replace the opening video later
 
 - Use footage you own or have permission to use on this website. A public YouTube video is not automatically available for reuse.
-- Ask Claude to export a silent H.264 MP4, about 10–15 seconds, with a small file size and fast-start playback. The current clip is portrait footage cropped by the page; a landscape replacement may need different framing in the CSS.
-- Replace `public/assets/hero-loop.mp4` and its matching `hero-poster.jpg`. Keep a useful still so the opening works when motion is paused, playback fails, or JavaScript is disabled.
+- The current review hero is a muted YouTube reference embed, with a source credit. It is another Malibu, not Dave’s boat. Do not describe it as SWAT footage. Its availability depends on YouTube.
+- For a local replacement, give Claude Dave’s own or cleared landscape footage. Export a silent H.264 MP4, about 10–15 seconds, with a small file size and fast-start playback, plus a matching still.
+- Ask Claude to replace the iframe/API playback in `public/index.html` and `public/app.js` with a local `<video>` and update its crop in `public/styles.css`. Add the MP4/still in `public/assets/` and update the asset index. Keep the still visible without JavaScript and when motion/playback is unavailable.
+- When the remote embed is removed, remove the YouTube script/frame permissions from `public/_headers` and its source-credit link; preserve the other security/review headers.
 - Check desktop and phone framing, readable text, pause/play, and reduced-motion behavior. Commit/push and verify the deployed version.
 
 ## Copy this into Claude
@@ -112,6 +114,7 @@ Instructions checked October 8, 2026. Claude should refresh these if the screens
 
 | Version | Date | Change |
 |---|---|---|
+| 1.3 | 2026-10-09 | Documented the credited Malibu reference embed and exact local-footage replacement steps. |
 | 1.2 | 2026-10-08 | Added video verification and plain-language media replacement instructions. |
 | 1.0 | 2026-10-08 | Created the SWAT review foundation and written maintainer handoff. |
 

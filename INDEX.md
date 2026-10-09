@@ -1,5 +1,5 @@
-**Version:** 1.4
-**Last updated:** 2026-10-08
+**Version:** 1.5
+**Last updated:** 2026-10-09
 
 # Public source index
 
@@ -19,6 +19,7 @@ Only `public/` is served by Cloudflare. No private correspondence, transcripts o
 
 | Version | Date | Change |
 |---|---|---|
+| 1.5 | 2026-10-09 | Registered Malibu reference embed, credited source, local fallback and remote-to-local replacement handoff. |
 | 1.4 | 2026-10-08 | Registered the video hero, updated media manifest and maintainer replacement instructions. |
 | 1.3 | 2026-10-08 | Registered website tagline/header integration and the public file/README documentation update. |
 | 1.0 | 2026-10-08 | Created the SWAT review foundation and written maintainer handoff. |

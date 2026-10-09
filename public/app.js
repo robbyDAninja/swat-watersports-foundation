@@ -40,48 +40,100 @@ if (menu && navigation) {
 }
 
 
-// Decorative local video; the poster works without JavaScript or playback.
+// Decorative reference footage through YouTube's normal embedded player.
 const hero = document.querySelector('.hero');
-const heroVideo = document.querySelector('#hero-video');
+const videoHost = document.querySelector('#hero-video');
 const videoToggle = document.querySelector('.video-toggle');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-let videoLoaded = false;
+let heroPlayer;
+let playerLoading = false;
+let playbackWanted = false;
 let videoPausedByVisitor = false;
-function updateVideoButton() {
-  videoToggle.textContent = heroVideo.paused ? 'Play background video' : 'Pause background video';
+let loopTimer;
+const referenceVideo = { videoId: 'v5yWFooRxRk', startSeconds: 303, endSeconds: 315 };
+function updateVideoButton(playing = false) {
+  videoToggle.textContent = playing ? 'Pause background video' : 'Play background video';
 }
-function playHeroVideo() {
-  if (!videoLoaded) {
-    const source = heroVideo.querySelector('source');
-    source.src = source.dataset.src;
-    heroVideo.load();
-    videoLoaded = true;
+function showHeroFallback() {
+  hero.classList.remove('has-video');
+  playbackWanted = false;
+  videoToggle.hidden = true;
+  clearInterval(loopTimer);
+}
+function loadHeroPlayer() {
+  playbackWanted = true;
+  if (heroPlayer?.playVideo) {
+    heroPlayer.mute();
+    heroPlayer.playVideo();
+    return;
   }
-  heroVideo.play().catch(updateVideoButton);
+  if (playerLoading) return;
+  playerLoading = true;
+  const previousReady = window.onYouTubeIframeAPIReady;
+  window.onYouTubeIframeAPIReady = () => {
+    if (typeof previousReady === 'function') previousReady();
+    heroPlayer = new window.YT.Player(videoHost, {
+      host: 'https://www.youtube-nocookie.com',
+      videoId: referenceVideo.videoId,
+      playerVars: {
+        autoplay: 0, controls: 0, playsinline: 1, rel: 0, disablekb: 1,
+        cc_load_policy: 0, iv_load_policy: 3, origin: window.location.origin,
+        start: referenceVideo.startSeconds, end: referenceVideo.endSeconds
+      },
+      events: {
+        onReady(event) {
+          const frame = event.target.getIframe();
+          frame.title = 'Malibu Sportster reference footage by Bridge Marina';
+          frame.tabIndex = -1;
+          frame.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+          event.target.mute();
+          if (playbackWanted) event.target.loadVideoById(referenceVideo);
+          else event.target.cueVideoById(referenceVideo);
+          loopTimer = setInterval(() => {
+            if (playbackWanted && heroPlayer.getPlayerState() === window.YT.PlayerState.PLAYING &&
+                heroPlayer.getCurrentTime() >= referenceVideo.endSeconds - 0.3) {
+              heroPlayer.seekTo(referenceVideo.startSeconds, true);
+            }
+          }, 250);
+        },
+        onStateChange(event) {
+          if (event.data === window.YT.PlayerState.PLAYING) {
+            if (!playbackWanted) { event.target.pauseVideo(); return; }
+            hero.classList.add('has-video');
+            updateVideoButton(true);
+          } else if (event.data === window.YT.PlayerState.PAUSED) {
+            updateVideoButton(false);
+          } else if (event.data === window.YT.PlayerState.ENDED && playbackWanted) {
+            event.target.loadVideoById(referenceVideo);
+          }
+        },
+        onError: showHeroFallback
+      }
+    });
+  };
+  const script = document.createElement('script');
+  script.src = 'https://www.youtube.com/iframe_api';
+  script.onerror = showHeroFallback;
+  document.head.append(script);
 }
-if (hero && heroVideo && videoToggle) {
+if (hero && videoHost && videoToggle) {
   videoToggle.hidden = false;
-  heroVideo.addEventListener('playing', () => {
-    hero.classList.add('has-video');
-    updateVideoButton();
-  });
-  heroVideo.addEventListener('pause', updateVideoButton);
-  function showHeroPoster() {
-    hero.classList.remove('has-video');
-    videoToggle.hidden = true;
-  }
-  heroVideo.addEventListener('error', showHeroPoster);
-  heroVideo.querySelector('source').addEventListener('error', showHeroPoster);
   videoToggle.addEventListener('click', () => {
-    videoPausedByVisitor = !heroVideo.paused;
-    if (videoPausedByVisitor) heroVideo.pause();
-    else playHeroVideo();
+    const playing = Boolean(heroPlayer && window.YT?.PlayerState && heroPlayer.getPlayerState() === window.YT.PlayerState.PLAYING);
+    videoPausedByVisitor = playing || (playerLoading && playbackWanted && !heroPlayer);
+    if (videoPausedByVisitor) {
+      playbackWanted = false;
+      heroPlayer?.pauseVideo?.();
+      updateVideoButton(false);
+    } else loadHeroPlayer();
   });
   reducedMotion.addEventListener('change', () => {
     if (reducedMotion.matches) {
-      heroVideo.pause();
+      playbackWanted = false;
+      heroPlayer?.pauseVideo?.();
       hero.classList.remove('has-video');
-    } else if (!videoPausedByVisitor && !navigator.connection?.saveData) playHeroVideo();
+      updateVideoButton(false);
+    } else if (!videoPausedByVisitor && !navigator.connection?.saveData) loadHeroPlayer();
   });
-  if (!reducedMotion.matches && !navigator.connection?.saveData) playHeroVideo();
+  if (!reducedMotion.matches && !navigator.connection?.saveData) loadHeroPlayer();
 }
