@@ -5,3 +5,6 @@ node_modules/
 !.env.example
 .DS_Store
 *.log
+
+# Private takeover progress, account IDs and DNS/alias backups
+.swat-private/

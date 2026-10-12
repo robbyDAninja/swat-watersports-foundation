@@ -1,5 +1,5 @@
-**Version:** 1.0
-**Last updated:** 2026-10-08
+**Version:** 1.1
+**Last updated:** 2026-10-12
 
 # Dave and Erinn’s page review
 
@@ -7,7 +7,7 @@ The page is a working review draft. These items need the business owner's or mai
 
 | Check | Current draft |
 |---|---|
-| Display name and colorful logo | SWAT Watersports; supplied rider logo in hero, tubing logo as an illustration |
+| Display name and colorful logo | SWAT Watersports; supplied colorful rider logo in header, tubing logo as an illustration |
 | Activities | Easy Up skiing, wakeboarding and tubing, as listed on the supplied flyer. Confirm equipment and availability; wakesurfing is not added yet |
 | Call/text recipient | (561) 801-0080, from the supplied flyer and mockup. Confirm whether Dave or Erinn receives each kind of inquiry |
 | Public domain | swatwatersports.com, printed on the flyer; registrar/DNS/account ownership still needs inspection |
@@ -20,6 +20,8 @@ The page is a working review draft. These items need the business owner's or mai
 | Booking link | Not supplied; call/text works. Erinn must supply the actual SWAT product URL; never use a different company's booking product |
 | Weather/cancellation policy | Visitors are asked to confirm it when booking; add the exact approved policy if desired |
 | Real photos | Existing SWAT video stills; supply better boat/action photos later if desired |
+| Existing email | Public DNS includes Namecheap forwarding records. Confirm whether aliases/catch-all are used and preserve or replace that service before moving DNS |
+| Hero reference | Credited YouTube Malibu Sportster reference: another boat/location. Confirm the review treatment or replace with owned/cleared footage |
 | Maintenance | Erinn's own repository/Cloudflare preview and a successful edit/redeploy need to be demonstrated by her |
 
 The design follows the supplied mockup's navy/serif/card direction while keeping SWAT's own identity. It retains the simple group wording from the earlier concept. Logo originals and the earlier concept remain intact. This is a separate site, even if Erinn hosts both businesses in her accounts.
@@ -28,4 +30,5 @@ Do not add a licensing claim, successful-first-try promise, service-area guarant
 
 | Version | Date | Change |
 |---|---|---|
+| 1.1 | 2026-10-12 | Corrected current header-logo placement and added existing-email and credited-reference checks for launch. |
 | 1.0 | 2026-10-08 | Created the SWAT review foundation and written maintainer handoff. |

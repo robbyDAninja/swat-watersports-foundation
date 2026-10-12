@@ -1,0 +1,10 @@
+{
+  "phase": "not-started",
+  "github": { "owner": "", "repository": "swat-watersports", "url": "" },
+  "cloudflare": { "accountLabel": "", "accountId": "", "worker": "swat-watersports", "previewUrl": "" },
+  "domain": { "name": "", "registrar": "", "currentNameservers": [], "assignedCloudflareNameservers": [], "dnsBackupPath": "", "dnssecChecked": false, "zoneActive": false },
+  "email": { "forwardingUseConfirmed": false, "provider": "", "aliasesBackupPath": "", "migrationPlanApproved": false, "deliveryTested": false },
+  "checks": { "independentCopyVerified": false, "previewVerified": false, "editRedeployVerified": false, "dnsCompared": false, "launchApproved": false, "apexHttpsVerified": false, "wwwHttpsVerified": false },
+  "evidence": [],
+  "nextHumanAction": ""
+}

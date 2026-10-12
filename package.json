@@ -5,8 +5,11 @@
   "description": "A simple SWAT Watersports website with a written maintainer handoff.",
   "scripts": {
     "dev": "wrangler dev",
-    "deploy": "wrangler deploy",
-    "check": "wrangler deploy --dry-run"
+    "deploy": "node scripts/deploy.mjs",
+    "check": "npm run handoff:check && wrangler deploy --dry-run --name swat-watersports",
+    "handoff:check": "node scripts/check.mjs",
+    "verify:live": "node scripts/verify-live.mjs",
+    "test": "node --test tests/*.test.mjs"
   },
   "devDependencies": {
     "wrangler": "4.149.0"

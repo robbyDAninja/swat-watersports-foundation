@@ -1,5 +1,5 @@
-**Version:** 1.5
-**Last updated:** 2026-10-09
+**Version:** 1.6
+**Last updated:** 2026-10-12
 
 # SWAT Watersports website
 
@@ -10,13 +10,13 @@ A simple website for Dave Bender, prepared by Bridge Ninja for Erinn to maintain
 **This is a review draft.** Confirm the business details in [CONTENT-CHECKLIST.md](CONTENT-CHECKLIST.md) before launching on Dave's domain.
 
 - **Brand guide: [four-page PDF](brand/SWAT-Watersports-Brand-Guide.pdf)** and [editable client guide](brand/Brand-Guide.md) from the existing review kit.
-- **Erinn: start with [HANDOFF.md](HANDOFF.md).** It walks through making your own GitHub copy, connecting Cloudflare, and later connecting Dave's domain.
+- **Erinn: start with [START-HERE.md](START-HERE.md).** It gives you one message to paste into Claude. [HANDOFF.md](HANDOFF.md) is its full step-by-step execution guide.
 - **Claude: read [CLAUDE.md](CLAUDE.md).** It identifies the editable files and the launch checks.
 - **Dave: review the activities, prices, phone number and meeting arrangements.** Erinn handles the website tools.
 
 Recommended arrangement: Dave owns his domain and business; Erinn maintains a separate SWAT repository and Cloudflare project in her existing accounts. SWAT stays separate from Stuart Sailing. A copy made from this template is independent; later template changes do not automatically change Erinn's copy.
 
-For a local preview, install Node.js LTS, run `npm ci`, then `npm run dev`. Open the address Wrangler prints. `npm run check` validates the deployment configuration without publishing. `npm run deploy` publishes to the Cloudflare account currently signed in, so check `npx wrangler whoami` first.
+For a local preview, use Node.js 22 or later, run `npm ci`, then `npm run dev`. `npm run handoff:check`, `npm test` and `npm run check` verify the source/guards and dry-run configuration without publishing. `npm run deploy` uses the guarded SWAT target: local use needs your verified owner/account in the ignored `.swat-private/maintainer-state.json`; Workers Builds uses its own authentication. The guide explains both routes and the Git connection required for automatic updates.
 
 The site is deliberately marked **noindex** during review. The handoff lists every setting to change at launch. Fonts and artwork are local. The optional reference video uses YouTube’s privacy-enhanced embedded player and contacts YouTube when loaded; this is a separate external dependency. The site sends no inquiry forms or its own analytics events. Call/text links open the visitor's phone or messaging app.
 
@@ -40,12 +40,15 @@ The previous rider-loop files have been removed from the current template. For l
 | public/app.js | Mobile menu, contact links and hero playback |
 | public/assets/ | Supplied logos, real SWAT photos, local water fallback and licensed font |
 | wrangler.jsonc | Cloudflare project name and public folder |
+| scripts/INDEX.md | Source checks, scoped deployment and live draft/launch verification |
+| maintainer-state.example.json | Blank template for private progress/account/DNS evidence; keep the completed copy ignored |
 | package.json / package-lock.json | Pinned deployment tool, not a website framework |
 
 Logo artwork remains raster source; these files are not vector or embroidery masters. The three photos are stills from SWAT footage, not a promise about every available activity. Contact details and activities come from the supplied flyer; rates come from the forwarded website draft.
 
 | Version | Date | Change |
 |---|---|---|
+| 1.6 | 2026-10-12 | Added one starting prompt, complete resumable execution guide, scoped deployment tools and live verification. |
 | 1.5 | 2026-10-09 | Replaced the rejected rider hero with a credited Malibu reference embed; documented external playback and replacement boundaries. |
 | 1.4 | 2026-10-08 | Added a local silent hero loop, motion/fallback behavior and media replacement pointers. |
 | 1.3 | 2026-10-08 | Recorded the colorful header logo and supplied tagline placements in the website. |
