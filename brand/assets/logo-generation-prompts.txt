@@ -1,0 +1,15 @@
+SWAT brand-kit candidate artwork
+Mode: built-in image_gen.imagegen
+Original reference: swat-logo-01-rider.png
+Navy logo reference for reverse/icon: swat-simple-navy.png
+Raster candidates; not vector or machine stitch files.
+
+NAVY SIMPLE LOGO (transparent background):
+Create a new simplified secondary logo for SWAT WATERSPORTS, using the supplied logo as the brand reference. The output is ONE isolated logo on a genuinely transparent background, no presentation board, no mockup, no extra labels. Flat solid single ink color deep navy #102B3A. Preserve the energetic bold forward-slanted block-letter feel of the SWAT wordmark, but use clean thick shapes and open letter counters. Exact spelling: SWAT large on top, WATERSPORTS as a legible bold smaller line below, and one simple broad flowing wave shape underneath. Keep WATERSPORTS substantial, not tiny. Wide compact horizontal composition approximately 2.5:1. Omit all boats, people, sunset, circle crest, palm trees, gradients, shadows, shading, outlines, fine splashes, textures and tiny details. This is for a left-chest logo on a boating shirt and one-color merchandise. Design for small-scale readability with very simple generous solid forms. It is an additional simplified application mark, not a replacement of the detailed logo. Crisp flat edges, ample transparent padding.
+
+WHITE-ON-NAVY REFERENCE (opaque background):
+Create the reversed version of this SWAT WATERSPORTS logo on a fully opaque flat deep navy #102B3A background. Make the SWAT letters, WATERSPORTS letters and simple wave all solid WHITE #FFFFFF. Keep the logo's exact clean bold shape and proportions from the input. The navy background must be perfectly solid, including inside all letter holes and every gap. NO transparency in this output. No splashes, texture, scratches, speckles, distressed edges, gradients, white residue, or glow. Clean professional flat vector-style typography and wave silhouette only, centered with generous navy padding. One logo.
+
+WAVE ICON (transparent background):
+Create a compact icon-only companion to the supplied SWAT WATERSPORTS secondary logo. Use ONLY its broad flowing wave motif, with the same two generous wave shapes. Remove every letter and all text. Flat solid deep navy #102B3A. Genuinely transparent background. Compose a bold centered recognizable wave icon in a square canvas, ample padding, broad curves, thick solid forms, no thin tips or tiny isolated fragments. Optimized for a small website tab icon and social avatar. No circles, borders, boat, sun, splashes, gradients, shadows, texture, outlines or presentation labels.
+

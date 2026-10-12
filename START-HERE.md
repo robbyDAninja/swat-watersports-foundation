@@ -1,4 +1,4 @@
-**Version:** 1.0
+**Version:** 1.1
 **Last updated:** 2026-10-12
 
 # Erinn: start here for SWAT Watersports
@@ -8,7 +8,7 @@ The website is built. Your next step is to put an independent copy in your exist
 - [Review the website](https://swat-watersports-revision-20261008.robby-121.workers.dev/)
 - [Create your GitHub copy](https://github.com/robbyDAninja/swat-watersports-foundation/generate)
 - [Download all files](https://github.com/robbyDAninja/swat-watersports-foundation/archive/refs/heads/main.zip)
-- [Brand guide PDF](brand/SWAT-Watersports-Brand-Guide.pdf)
+- [Brand guide PDF](brand/SWAT-Watersports-Brand-Guide.pdf) and [logo, font and color files](brand/START-HERE.md)
 
 **Give Claude the message below.** It can prepare and execute the supported steps, stopping when your sign-in, approval or a registrar action is needed. You do not need to work through the technical guide alone.
 
@@ -24,4 +24,5 @@ The website is built. Your next step is to put an independent copy in your exist
 
 | Version | Date | Change |
 |---|---|---|
+| 1.1 | 2026-10-12 | Linked the complete existing brand assets now included in the template. |
 | 1.0 | 2026-10-12 | Created a single entry point, useful links and a copy-ready Claude takeover prompt. |

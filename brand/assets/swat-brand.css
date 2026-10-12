@@ -1,0 +1,18 @@
+/* Derived from SWAT brand guide v0.2. Review candidate. Keep font licenses. */
+@font-face { font-family: 'Barlow Condensed'; src: url('fonts/BarlowCondensed-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url('fonts/InterVariable.woff2') format('woff2'); font-weight: 100 900; font-style: normal; font-display: swap; }
+:root {
+  --swat-navy: #102B3A; --swat-white: #FFFFFF;
+  --swat-blue: #249AED; --swat-orange: #FE6F2B;
+  --swat-font-heading: 'Barlow Condensed', Arial, sans-serif;
+  --swat-font-body: 'Inter', Arial, sans-serif;
+}
+body { font-family: var(--swat-font-body); color: var(--swat-navy); background: var(--swat-white); font-size: 1.0625rem; line-height: 1.6; }
+h1, h2, h3 { font-family: var(--swat-font-heading); font-weight: 700; line-height: 1.1; }
+h1 { font-size: clamp(2.5rem, 6vw, 3.5rem); }
+h2 { font-size: clamp(1.75rem, 4vw, 2.25rem); }
+a { color: var(--swat-navy); text-decoration: underline; text-decoration-color: var(--swat-blue); text-decoration-thickness: 2px; text-underline-offset: .2em; }
+.swat-button { color: var(--swat-navy); background: var(--swat-blue); font: 600 1rem var(--swat-font-body); padding: .8em 1.2em; border: 0; border-radius: .25rem; text-decoration: none; display: inline-block; }
+.swat-button:focus-visible, a:focus-visible { outline: 3px solid var(--swat-navy); outline-offset: 4px; }
+.swat-dark { color: var(--swat-white); background: var(--swat-navy); }
+.swat-dark a { color: var(--swat-white); }

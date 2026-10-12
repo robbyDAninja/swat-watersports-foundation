@@ -1,4 +1,4 @@
-**Version:** 1.6
+**Version:** 1.7
 **Last updated:** 2026-10-12
 
 # SWAT Watersports website
@@ -9,7 +9,7 @@ A simple website for Dave Bender, prepared by Bridge Ninja for Erinn to maintain
 
 **This is a review draft.** Confirm the business details in [CONTENT-CHECKLIST.md](CONTENT-CHECKLIST.md) before launching on Dave's domain.
 
-- **Brand guide: [four-page PDF](brand/SWAT-Watersports-Brand-Guide.pdf)** and [editable client guide](brand/Brand-Guide.md) from the existing review kit.
+- **Brand guide: [four-page PDF](brand/SWAT-Watersports-Brand-Guide.pdf)** and [editable client guide](brand/Brand-Guide.md), plus the [complete existing logo/font/color export](brand/START-HERE.md). Candidate artwork and style recommendations retain their review status.
 - **Erinn: start with [START-HERE.md](START-HERE.md).** It gives you one message to paste into Claude. [HANDOFF.md](HANDOFF.md) is its full step-by-step execution guide.
 - **Claude: read [CLAUDE.md](CLAUDE.md).** It identifies the editable files and the launch checks.
 - **Dave: review the activities, prices, phone number and meeting arrangements.** Erinn handles the website tools.
@@ -48,6 +48,7 @@ Logo artwork remains raster source; these files are not vector or embroidery mas
 
 | Version | Date | Change |
 |---|---|---|
+| 1.7 | 2026-10-12 | Completed the existing brand-asset export so the guide’s listed artwork/fonts are delivered with the source. |
 | 1.6 | 2026-10-12 | Added one starting prompt, complete resumable execution guide, scoped deployment tools and live verification. |
 | 1.5 | 2026-10-09 | Replaced the rejected rider hero with a credited Malibu reference embed; documented external playback and replacement boundaries. |
 | 1.4 | 2026-10-08 | Added a local silent hero loop, motion/fallback behavior and media replacement pointers. |
